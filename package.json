@@ -1,6 +1,6 @@
 {
   "name": "@viievents/videojs-vimeo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Videojs Vimeo official plugin fork for working with video.js v7.6.6 onwards.",
   "main": "dist/videojs-vimeo.cjs.js",
   "module": "dist/videojs-vimeo.esm.js",
