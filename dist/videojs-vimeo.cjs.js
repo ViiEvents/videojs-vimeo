@@ -165,7 +165,22 @@ class Vimeo extends Tech {
     return true;
   }
 
-  src() {
+  src(source) {
+
+    if (source) {
+
+      delete this.errorNumber;
+      this.options_.source.src = source;
+      this.videoId = source.split('vimeo.com/')[1];
+
+      this._player.loadVideo(this.videoId).then(()=>{
+
+        if (this.options_.autoplay) {
+            this.play();
+        }  
+      }).catch(error=>{console.log(error);});
+    }
+
     return this.options_.source;
   }
 
